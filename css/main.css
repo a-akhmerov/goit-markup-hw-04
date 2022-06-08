@@ -147,6 +147,12 @@ img {
 .contact-item:not(:last-child){
   margin-right: 50px;
 }
+.mail{
+  margin-right: 10px;
+}
+.smartphone{
+  margin-right: 10px;
+}
 
 .nav-link:hover,
 .nav-link:active,
@@ -157,6 +163,7 @@ img {
 .footer-contact:active,
 .footer-contact:hover {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 /* Navigation */
 
@@ -363,7 +370,10 @@ img {
 .coordinate {
   color: var(--white-text-color);
 }
-
+.footer>.container{
+  display: flex;
+  align-items: baseline;
+}
 .adress {
   font-style: normal;
 }
@@ -378,6 +388,43 @@ img {
   display: block;
   margin-bottom: 20px;
 }
+.adress-box{
+  margin-right: 70px;
+}
+.social-subtitle{
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.17;
+  color: var(--white-text-color);
+  
+}
+.social-list{
+  display: flex;
+  justify-content: center;
+}
+.social-link{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  fill: var(--white-text-color);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.social-item{
+  width: 44px;
+  height: 44px;
+}
+.social-item:not(:last-child){
+  margin-right: 10px;
+}
+.social-link:active,
+.social-link:hover{
+  background: var(--accent-color);
+}
 
 /* Footer */
 
@@ -387,6 +434,7 @@ img {
 
   background-color: var(--filtr-btn-bcg-color);
   border-color: var(--filtr-btn-bcg-color);
+  
   color: var(--dark-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -406,6 +454,7 @@ img {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   color: var(--white-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .button {
   font-family: inherit;
