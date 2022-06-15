@@ -10,6 +10,7 @@
   --hero-btn-active-color: #188ce8;
   --filtr-btn-bcg-color: #f5f4fa;
   --team-bcg-color: #f5f4fa;
+  --lite-grey-color: #f5f4fa;
   --dark-text-color: #212121;
   --footer-contact-color: rgba(255, 255, 255, 0.6);
   --card-gap:30px;
@@ -147,23 +148,20 @@ img {
 .contact-item:not(:last-child){
   margin-right: 50px;
 }
-.mail{
-  margin-right: 10px;
-}
-.smartphone{
+.contact-icon{
+  fill: currentColor;
   margin-right: 10px;
 }
 
 .nav-link:hover,
-.nav-link:active,
+.nav-link:focus,
 .contact-link:hover,
-.contact-link:active,
+.contact-link:focus,
 .coordinate:hover,
-.coordinate:active,
-.footer-contact:active,
+.coordinate:focus,
+.footer-contact:focus,
 .footer-contact:hover {
   color: var(--accent-color);
-  fill: var(--accent-color);
 }
 /* Navigation */
 
@@ -233,12 +231,12 @@ img {
 }
 .privelegy-icon{
   display: flex;
-  width: 270px;
   height: 120px;
-  background-color: var(--grey-bcg-color);
+  background-color: var(--lite-grey-color);
   margin-bottom: 30px;
   justify-content: center;
   align-items: center;
+  border-radius: 4px;
 }
 
 /* Privelegy section */
@@ -289,14 +287,12 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 .team-card-content{
-  padding-top:30px;
-  padding-bottom:0px;
+  padding:30px;
 }
 
 .team-soc-list{
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
 }
 .team-soc-item{
   width: 44px;
@@ -313,8 +309,9 @@ img {
   height: 100%;
   border-radius: 50%;
   fill: var(--icon-main-color);
+  background-color: rgba(255, 255, 255, 0.1);
 }
-.team-soc-link:active,
+.team-soc-link:focus,
 .team-soc-link:hover{
   background-color: var(--accent-color);
   fill: var(--white-bcg-color);
@@ -327,32 +324,29 @@ img {
   padding-bottom: 94px;
 }
 .clients-list{
-  display: flex;
+  --card-item:6;
 }
 .clients-title{
   margin-bottom: 50px;
 }
-.clients-item{
-  height: 92px;
-  width: 170px;
-}
+
 .clients-link{
+  padding-top: 16px;
+  padding-bottom: 16px;
   display: flex;
   width: 100%;
   height: 100%;
   fill: var(--icon-main-color);
   justify-content: center;
   align-items: center;
-  border: 1px solid var(--icon-main-color);
+  border: 1px solid;
+  border-color: var(--icon-main-color);
   border-radius: 4px;
 }
-.clients-link:active,
+.clients-link:focus,
 .clients-link:hover{
   fill: var(--accent-color);
   border-color: var(--accent-color);
-}
-.clients-item:not(:last-child){
-  margin-right: 30px;
 }
 
 /* Clients section */
@@ -400,30 +394,8 @@ img {
   color: var(--white-text-color);
   
 }
-.social-list{
-  display: flex;
-  justify-content: center;
-}
-.social-link{
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
+.footer .team-soc-link{
   fill: var(--white-text-color);
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-}
-.social-item{
-  width: 44px;
-  height: 44px;
-}
-.social-item:not(:last-child){
-  margin-right: 10px;
-}
-.social-link:active,
-.social-link:hover{
-  background: var(--accent-color);
 }
 
 /* Footer */
@@ -433,8 +405,8 @@ img {
   padding: 6px 22px;
 
   background-color: var(--filtr-btn-bcg-color);
-  border-color: var(--filtr-btn-bcg-color);
   
+  border:none;
   color: var(--dark-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -449,7 +421,7 @@ img {
 .filtr-item:not(:last-child){
   margin-right: 8px;
 }
-.filtr-button:active,
+.filtr-button:focus,
 .filtr-button:hover {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
@@ -466,8 +438,15 @@ img {
 .projects-item {
   background-color: var(--white-bcg-color);
 }
-.projects-item:active,
 .projects-item:hover{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.projects-link{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects-link:focus{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -497,6 +476,7 @@ flex-basis: calc(100%/var(--card-item) - var(--card-gap));
 .projects-card-content{
   border: 1px solid #EEEEEE;
   padding: 20px 24px;
+  width: 100%;
 }
 
 
